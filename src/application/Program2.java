@@ -12,13 +12,20 @@ public class Program2 {
 		
 		DepartmentDao dep = DaoFactory.createDepartmentDao();
 		
-		System.out.println("==== TEST 1: seller findAll =====");
+		System.out.println("==== TEST 1: department findAll =====");
 		List<Department> list = dep.findAll();
 		list.forEach(System.out::println);
 		
 		System.out.println();
-		System.out.println("==== TEST 2: seller findById =====");
+		System.out.println("==== TEST 2: department findById =====");
 		Department department = dep.findById(2);
 		System.out.println(department);
+		
+		System.out.println();
+		System.out.println("==== TEST 3: department insert =====");
+		Department newDep = new Department(null, "Reality");
+		dep.insert(newDep);
+		System.out.println("Inserted! New id = " + newDep.getId());
+		
 	}
 }
