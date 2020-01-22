@@ -15,5 +15,10 @@ public class Program2 {
 		System.out.println("==== TEST 1: seller findAll =====");
 		List<Department> list = dep.findAll();
 		list.forEach(System.out::println);
+		
+		System.out.println();
+		System.out.println("==== TEST 2: seller findById =====");
+		Department department = dep.findById(2);
+		System.out.println(department);
 	}
 }
